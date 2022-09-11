@@ -19,6 +19,11 @@ const thoughtSchema = new schema (
         type:String,
         required: true,
     },
-    
-
-})
+    reactions: [reactionSchema]
+    },
+   { toJSON: {
+        getters: true
+    },
+    id: false,
+}
+);
