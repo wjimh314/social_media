@@ -1,18 +1,24 @@
-const { Schema, model } = require("mongoose");
-const userSchema = new Schema({
-	username: {
-		type: String,
-		required: true,
-		unique: true,
-		trim: true,
-	},
-	email: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
+const {schema, model } = require("mongoose");
+const reactionSchema = require(".reaction)");
+
+
+const thoughtSchema = new schema (
+    {
+        thoughtText: {
+            type:String,
+            required: true,
+            minlength:1,
+            maxlength:280,
+        },
+        createAt: {
+            type: Date,
+            default: Date.now, 
+            get: (timestamp) => dateFormat(timestamp),
     },
-    thoughts: {
-        
-    }
-});
+    username: {
+        type:String,
+        required: true,
+    },
+    
+
+})
