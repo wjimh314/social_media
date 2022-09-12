@@ -90,7 +90,7 @@ const userController = {
 
     },
 
-    addFriend(req.res) {
+    addFriend(req, res) {
         User.findOneAndUpdate({
                 _id: req.params.userID
             }, {
