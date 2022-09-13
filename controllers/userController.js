@@ -4,7 +4,7 @@ const {
 } = require("../models");
 
 const userController = {
-    // Get all users
+   
     getUsers(req, res) {
         User.find()
             .select("-__v")
@@ -18,7 +18,7 @@ const userController = {
     },
     getSingleUser(req, res) {
         User.findOne({
-                _id: req.params.courseId
+                _id: req.params.userId
             })
             .select('-__v')
             .populate("friends")
@@ -38,7 +38,7 @@ const userController = {
     },
     createUser(req, res) {
         User.create(req.body)
-            .then((dbUserData) => res.json(dbUserData))
+            .then((dbUserData) => { res.json(dbUserData);})
             .catch((err) => {
                 console.log(err);
                 return res.status(500).json(err);
@@ -48,10 +48,10 @@ const userController = {
         User.findOneAndUpdate({
                 _id: req.params.userId
             }, {
-                $set: req.body
+                $set: req.body,
             }, {
                 runValidators: true,
-                new: true,
+                new: true
             })
             .then((dbUserData) => {
                 if (!dbUserData) {
@@ -91,10 +91,10 @@ const userController = {
 
     addFriend(req, res) {
         User.findOneAndUpdate({
-                _id: req.params.userID
+                _id: req.params.userId
             }, {
                 $addToSet: {
-                    friends: req.params.friendID
+                    friends: req.params.friendId
                 }
             }, {
                 new: true
