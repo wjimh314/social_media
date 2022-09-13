@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('mongoose').Router();
 
 const {
     getThoughts,
