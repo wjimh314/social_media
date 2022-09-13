@@ -1,7 +1,6 @@
 const {
-    user,
-    Thought,
-    User
+    
+    User, Thought
 } = require("../models");
 
 const userController = {
@@ -18,7 +17,7 @@ const userController = {
             });
     },
     getSingleUser(req, res) {
-        user.findOne({
+        User.findOne({
                 _id: req.params.courseId
             })
             .select('-__v')
