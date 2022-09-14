@@ -3,7 +3,7 @@
 
 the purpose of this challenge was to make a NoSql database for a social media platform
 
-## Table of Contents (Optional)
+## Table of Contents e
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
@@ -43,3 +43,19 @@ WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
 
+part one users
+
+https://drive.google.com/file/d/1x3JUsc0Tq3ZmIpC4jw9yUugb84rJr41t/view
+
+
+
+
+part two thoughts
+
+https://drive.google.com/file/d/1ikr5aHKQ71YGlHld9_my_WynWZh3zZDB/view
+
+part three reactions
+
+https://drive.google.com/file/d/1LTYLXZzNdES3AHb5hfiGXWfIFVYeahL_/view
+
+https://github.com/wjimh314/social_media
