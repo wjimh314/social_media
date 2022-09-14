@@ -9,7 +9,7 @@ const reactionSchema = new Schema(
     },
     reactionBody: {
       type: String,
-      required:" comment" ,
+      required:"comment" ,
       minlength: 1,
       maxLength: 280,
       trim: true,
@@ -46,7 +46,7 @@ const thoughtSchema = new Schema(
     default: Date.now,
     //get
   },
-  usermame: {
+  username: {
     type: String,
     required: "username?"
   },
